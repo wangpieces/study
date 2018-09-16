@@ -1,7 +1,7 @@
 package com.wangpiece.service.designpattern.factory.abstractfactory;
 
 /**
- * 场景
+ * 抽象工厂
  */
 public interface IFactory {
 
