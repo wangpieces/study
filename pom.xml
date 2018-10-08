@@ -42,6 +42,14 @@
 			<artifactId>amqp-client</artifactId>
 		</dependency>
 
+		<!--Hadoop MapReduce -->
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-mapreduce-client-jobclient</artifactId>
+			<version>3.1.1</version>
+			<scope>provided</scope>
+		</dependency>
+
 	</dependencies>
 
 	<distributionManagement>
