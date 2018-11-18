@@ -35,6 +35,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-ext-jdk15on -->
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-ext-jdk15on</artifactId>
+			<version>1.60</version>
+		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.rabbitmq/amqp-client -->
 		<dependency>
