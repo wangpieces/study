@@ -53,4 +53,18 @@ class Child extends MainTest {
     public static void main(String[] args) {
         new Child("Child.test");
     }
+
+    /**
+     * 运行结果
+     A
+     C
+     B
+     MainTest
+     D
+     Child.test
+     test()
+     B
+     MainTest(name)
+     MainTest.test
+     */
 }
