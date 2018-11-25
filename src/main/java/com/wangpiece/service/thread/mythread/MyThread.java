@@ -1,4 +1,4 @@
-package com.wangpiece.service.thread;
+package com.wangpiece.service.thread.mythread;
 
 import java.util.Vector;
 import java.util.concurrent.Callable;

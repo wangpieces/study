@@ -1,9 +1,6 @@
 package com.wangpiece.service.javatest;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -14,14 +11,16 @@ import java.util.concurrent.ConcurrentHashMap;
 public class MyCollection {
 
     public static void main(String[] args) {
-        new HashMap<String,String>().put("test","abc");
+        new HashMap<String,String>().put(null,null);
         new HashMap<String,String>().get("");
 //        Collections.synchronizedMap(null);
         new ConcurrentHashMap<>().put("","");
         new ConcurrentHashMap<>().size();
+        new Hashtable<>().put("","");
 
 
         new ArrayList().add("");
+//        new ArrayList().get(1);
         new LinkedList<>().add("");
     }
 }

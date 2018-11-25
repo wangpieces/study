@@ -1,22 +1,22 @@
-package com.wangpiece.service.thread;
+package com.wangpiece.service.thread.mythread;
 
 /**
  * @author wang.xu
  * @desc
- * @date 2018-11-18 17:03
+ * @date 2018-11-18 16:58
  */
-public class Customer implements Runnable{
+public class Producer implements Runnable{
 
     private Person person;
 
-    public Customer (Person person) {
+    public Producer(Person person) {
         this.person = person;
     }
 
     @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
-            person.get();
+            person.set((i+1));
         }
     }
 }

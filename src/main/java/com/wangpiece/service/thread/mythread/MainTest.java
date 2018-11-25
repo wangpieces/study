@@ -1,4 +1,4 @@
-package com.wangpiece.service.thread;
+package com.wangpiece.service.thread.mythread;
 
 /**
  * @author wang.xu
@@ -27,6 +27,11 @@ public class MainTest {
         System.out.println(name);
     }
 
+    public void testStr(String str , char[] c) {
+        str = "test";
+        c[0] = 'm';
+    }
+
 }
 
 class Child extends MainTest {
@@ -51,7 +56,12 @@ class Child extends MainTest {
     }
 
     public static void main(String[] args) {
-        new Child("Child.test");
+        //new Child("Child.test");
+        String str = new String("abc");
+        char[] c = new char[]{'a','b','c'};
+        new MainTest().testStr(str,c);
+        System.out.println(str);
+        System.out.println(c);
     }
 
     /**

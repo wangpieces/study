@@ -1,4 +1,4 @@
-package com.wangpiece.service.thread;
+package com.wangpiece.service.thread.mythread;
 
 /**
  * @author wang.xu````
