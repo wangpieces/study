@@ -11,9 +11,38 @@ import java.util.concurrent.locks.Lock;
  */
 public class MyLock implements Lock{
 
-    @Override
-    public void lock() {
+    private boolean isLock = false;
 
+    private Thread lockBy = null;
+
+
+    private int count;
+
+    @Override
+    public synchronized void lock() {
+        Thread currentThrad = Thread.currentThread();
+        while(isLock && currentThrad != lockBy) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        isLock = true;
+        lockBy = currentThrad;
+        count++;
+    }
+
+    @Override
+    public synchronized void unlock() {
+        Thread currentThread = Thread.currentThread();
+        if(isLock && currentThread == lockBy){
+            count--;
+            if(count == 0){
+                isLock = false;
+                notifyAll();
+            }
+        }
     }
 
     @Override
@@ -29,11 +58,6 @@ public class MyLock implements Lock{
     @Override
     public boolean tryLock(long time, TimeUnit unit) throws InterruptedException {
         return false;
-    }
-
-    @Override
-    public void unlock() {
-
     }
 
     @Override
